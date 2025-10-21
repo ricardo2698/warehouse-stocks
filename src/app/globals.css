@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Mejoras para móviles */
+@media (max-width: 768px) {
+  /* Evitar zoom al hacer focus en inputs en iOS */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* Mejorar el touch en botones */
+  button {
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Scroll suave en móviles */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hacer que las tablas sean scrolleables horizontalmente */
+  .ant-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Ajustar el padding de las tarjetas en móvil */
+  .ant-card-body {
+    padding: 12px;
+  }
+
+  /* Ajustar modal en móviles */
+  .ant-modal {
+    max-width: calc(100vw - 16px);
+    margin: 8px;
+  }
+
+  /* Ajustar paginación en móviles */
+  .ant-pagination {
+    font-size: 12px;
+  }
+
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    min-width: 28px;
+    height: 28px;
+    line-height: 26px;
+  }
+}
+
+/* Mejorar el responsive de las tablas */
+.responsive-table .ant-table {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .responsive-table .ant-table {
+    font-size: 14px;
+  }
+}
+
+/* Scroll horizontal suave en tablas */
+.ant-table-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #d9d9d9 #f0f0f0;
+}
+
+.ant-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.ant-table-wrapper::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.ant-table-wrapper::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 4px;
+}
+
+.ant-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #bfbfbf;
+}
+
+/* Mejorar visualización de drawer en móviles */
+.ant-drawer-body {
+  padding: 0;
+}
+
+/* Ajustar tamaño de iconos en móviles */
+@media (max-width: 640px) {
+  .anticon {
+    font-size: 14px !important;
+  }
+}
