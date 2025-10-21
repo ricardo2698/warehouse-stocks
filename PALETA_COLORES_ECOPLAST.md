@@ -370,3 +370,4 @@ La paleta se inspiró en:
 - ♻️ Símbolo de reciclaje y sostenibilidad
 - 🌍 Compromiso con el cuidado del planeta
 - 💚 Verde como color de la innovación ecológica
+
